@@ -3,7 +3,7 @@ Adds a toggle button to hide/show other institutions that own the item when view
 
 ## Installation
 
-To add the feature to a view in Primo 5, you must download the UI theme in your Primo Admin for a view and edit the js/custom.js and css/custom1.css files in the theme. 
+To add the feature to a view in Primo 5, you must download the UI theme in your Primo Admin for a view and edit the *js/custom.js* and *css/custom1.css* files in the theme. 
 
 Add the following to your custom1.css file
 ```css
