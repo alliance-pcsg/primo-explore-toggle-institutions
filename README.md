@@ -19,8 +19,7 @@ Add the following to your custom.js file
     /*var app = angular.module('centralCustom', ['angularLoad']);*/
     /****************************************************************************************************/
 	
-	/* Hide/Show Button */
-	/* Summit Hide/Show Button */
+	/* Hide/Show Other Institutions Button */
 	app.component('prmAlmaMoreInstAfter', {
 		bindings: {parentCtrl: '<'},
 		controller: function () {
@@ -28,23 +27,23 @@ Add the following to your custom.js file
 				angular.element(document.querySelector('md-tabs')).addClass("hide");
 			};
 		},
-		template: '<div class="hide_show_other_institutions_container"><button class="hide_show_summit_libraries_button" onclick="hide_show_summit_libraries()" something>Show Summit Libraries</button></div>'
+		template: '<div class="hide_show_other_institutions_container"><button class="hide_show_other_institutions_button" onclick="hide_show_other_institutions()">Show Libraries</button></div>'
 	});
 
 })();
 
 
-function hide_show_summit_libraries() 
+function hide_show_other_institutions() 
 {
 	if(angular.element(document.querySelector('md-tabs')).hasClass("hide"))
 	{
 		angular.element(document.querySelector('md-tabs')).removeClass("hide");
-		angular.element(document.getElementsByClassName('hide_show_summit_libraries_button')).text("Hide Summit Libraries");
+		angular.element(document.getElementsByClassName('hide_show_other_institutions_button')).text("Hide Libraries");
 	}
 	else
 	{
 		angular.element(document.querySelector('md-tabs')).addClass("hide");
-		angular.element(document.getElementsByClassName('hide_show_summit_libraries_button')).text("Show Summit Libraries");
+		angular.element(document.getElementsByClassName('hide_show_other_institutions_button')).text("Show Libraries");
 	}
 	
 	// place button above list of libraries 
