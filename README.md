@@ -1,53 +1,30 @@
-# primo5-hide-show-other-institutions
-Adds a toggle button to hide/show other institutions that own the item when viewing a record's details in Ex Libris Primo 5.
+# primo-explore-toggle-institutions
 
-## Installation
+## installation
 
-To add the feature to a view in Primo 5, you must download the UI theme in your Primo Admin for a view and edit the *js/custom.js* file in the theme. 
+### setting up the dev environment
 
-Add the following to your custom.js file
-```js
+if you don't have a `package.json` as part of your view code, go to your package directory (e.g. `/primo-explore/custom/LCC_NEWUI`) and run:
+```sh
+npm init
+```
 
-(function () {
-   "use strict";
-   'use strict';
+follow the prompts and fill out basic information for your package.
 
-  var app = angular.module('viewCustom', ['angularLoad']);
+### installing the button
 
-  /****************************************************************************************************/
-  /*In case of CENTRAL_PACKAGE - comment out the below line to replace the other module definition*/
-  /*var app = angular.module('centralCustom', ['angularLoad']);*/
-  /****************************************************************************************************/
-	
-  /* Hide/Show Other Institutions Button */
-  app.component('prmAlmaMoreInstAfter', {
-    bindings: {parentCtrl: '<'},
-    controller: function () {
-      this.$onInit = function () {
-        angular.element(document.querySelector('md-tabs')).addClass("hide");
-      };
-    },
-    template: '<div class="hide_show_other_institutions_container"><button class="hide_show_other_institutions_button" onclick="hide_show_other_institutions()">Show Libraries</button></div>'
-  });
-  
-})();
+to install the button, from inside your package directory (e.g. `/primo-explore/custom/LCC_NEWUI`), run:
 
+```sh
+npm install primo-explore-toggle-institutions
+```
 
-function hide_show_other_institutions() 
-{
-  if(angular.element(document.querySelector('md-tabs')).hasClass("hide"))
-  {
-    angular.element(document.querySelector('md-tabs')).removeClass("hide");
-    angular.element(document.getElementsByClassName('hide_show_other_institutions_button')).text("Hide Libraries");
-  }
-  else
-  {
-    angular.element(document.querySelector('md-tabs')).addClass("hide");
-    angular.element(document.getElementsByClassName('hide_show_other_institutions_button')).text("Show Libraries");
-  }
-	
-  // place button above list of libraries 
-  angular.element(document.querySelector('prm-alma-more-inst-after')).after(angular.element(document.querySelector('prm-alma-more-inst md-tabs')));
-}
+the button will appear automatically; no configuration is necessary.
 
+### uninstalling the button
+
+from inside your package directory (e.g. `/primo-explore/custom/LCC_NEWUI`), run:
+
+```sh
+npm install primo-explore-toggle-institutions
 ```
