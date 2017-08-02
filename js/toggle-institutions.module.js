@@ -14,6 +14,7 @@ angular
 			this.$onInit = function () {
 				this.button = angular.element(document.querySelector('prm-alma-more-inst-after'))
 				this.tabs = angular.element(document.querySelector('prm-alma-more-inst md-tabs'))
+				this.button.after(this.tabs)
 				if (!$scope.showLibs) this.tabs.addClass('hide')
 			}
 		}]
