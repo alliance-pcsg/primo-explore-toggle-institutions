@@ -1,11 +1,8 @@
 {
   "name": "primo-explore-toggle-institutions",
   "version": "1.0.0",
-  "description": "adds a toggle button to hide/show other institutions that own the item when viewing a record's details in primo.",
+  "description": "adds a toggle to hide/show other institutions that own the item on the primo-explore details page.",
   "main": "js/institutions.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Alliance-PCJWG/primo-explore-toggle-institutions.git"
