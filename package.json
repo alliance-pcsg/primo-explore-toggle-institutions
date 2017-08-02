@@ -1,6 +1,6 @@
 {
   "name": "primo-explore-toggle-institutions",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "adds a toggle to hide/show other institutions that own the item on the primo-explore details page.",
   "main": "js/institutions.js",
   "repository": {
