@@ -3,7 +3,7 @@
 <!-- ![Build Status](https://api.travis-ci.org/Alliance-PCJWG/primo-explore-clickable-logo.svg?branch=master) -->
 
 ## Features
-The list of institutions that also hold an item in details view will is collapsed, and a button to toggle expanding the list appears.
+The list of institutions that also hold an item in details view is collapsed, and a button to toggle expanding the list appears.
 
 ### Screenshot
 ![screenshot](screenshot.png)
