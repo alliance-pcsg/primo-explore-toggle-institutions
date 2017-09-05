@@ -1,21 +1,29 @@
 angular
-	.module('toggleInstitutions', [])
-	.component('prmAlmaMoreInstAfter', {
-		template: `
-			<md-button class="md-raised" ng-click="$ctrl.toggleLibs()">
-				{{ showLibs ? 'Hide Libraries &laquo;' : 'Show Libraries &raquo;' }}
-			</md-button>`,
-		controller: ['$scope', function ($scope) {
-			$scope.showLibs = false
-			this.toggleLibs = function () {
-				$scope.showLibs = !$scope.showLibs
-				this.tabs.hasClass('hide') ? this.tabs.removeClass('hide') : this.tabs.addClass('hide')
-			}
-			this.$onInit = function () {
-				this.button = angular.element(document.querySelector('prm-alma-more-inst-after'))
-				this.tabs = angular.element(document.querySelector('prm-alma-more-inst md-tabs'))
-				this.button.after(this.tabs)
-				if (!$scope.showLibs) this.tabs.addClass('hide')
-			}
-		}]
-	})
+  .module('toggleInstitutions', [])
+  .component('prmAlmaMoreInstAfter', {
+    template: `
+		<md-button class="md-raised" ng-click="toggleLibs()" id="summitButton" aria-controls="summitLinks" aria-expanded="false" aria-label="Show/Hide Summit Libraries">
+ 			{{ showLibs ? 'Hide Libraries' : 'Show Libraries' }}
+ 			<span aria-hidden="true">{{showLibs ? '&laquo;' : '&raquo;' }}</span>
+		</md-button>`,
+    controller: ['$scope', function($scope) {
+      this.$onInit = function() {
+        $scope.showLibs = false;
+        $scope.button = angular.element(document.querySelector('prm-alma-more-inst-after button'));
+        $scope.tabs = angular.element(document.querySelector('prm-alma-more-inst md-tabs'));
+        $scope.tabs.attr('id', 'summitLinks');
+        $scope.tabs.addClass('hide');
+        $scope.button.parent().after($scope.tabs);
+        $scope.toggleLibs = function() {
+          $scope.showLibs = !$scope.showLibs;
+          if ($scope.tabs.hasClass('hide')) {
+            $scope.tabs.removeClass('hide');
+            $scope.button.attr("aria-expanded", "true");
+          } else {
+            $scope.tabs.addClass('hide');
+            $scope.button.attr("aria-expanded", "false");
+          }
+        };
+      };
+    }]
+  })
