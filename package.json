@@ -5,7 +5,7 @@
   "main": "js/institutions.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alliance-PCJWG/primo-explore-toggle-institutions.git"
+    "url": "git+https://github.com/alliance-pcsg/primo-explore-toggle-institutions.git"
   },
   "keywords": [
     "library",
@@ -18,7 +18,27 @@
   "author": "Nick Budak",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Alliance-PCJWG/primo-explore-toggle-institutions/issues"
+    "url": "https://github.com/alliance-pcsg/primo-explore-toggle-institutions/issues"
   },
-  "homepage": "https://github.com/Alliance-PCJWG/primo-explore-toggle-institutions#readme"
+  "homepage": "https://github.com/alliance-pcsg/primo-explore-toggle-institutions#readme",
+  "devDependencies": {
+    "angular": "^1.6.7",
+    "angular-mocks": "^1.6.7",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.12.1",
+    "eslint-config-google": "^0.9.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^4.0.0",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-jasmine": "^1.1.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-spec-reporter": "0.0.31"
+  },
+  "scripts": {
+    "start": "./bin/run"
+  }
 }
