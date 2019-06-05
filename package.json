@@ -1,6 +1,6 @@
 {
   "name": "@orbis-cascade/primo-explore-toggle-institutions",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "adds a toggle to hide/show other institutions that own the item on the primo-explore details page.",
   "main": "index.js",
   "repository": {
@@ -21,6 +21,5 @@
     "url": "https://github.com/alliance-pcsg/primo-explore-toggle-institutions/issues"
   },
   "homepage": "https://github.com/alliance-pcsg/primo-explore-toggle-institutions#readme",
-  "scripts": {
-  }
+  "scripts": {}
 }
